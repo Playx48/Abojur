@@ -1,0 +1,34 @@
+.collections {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    grid-template-rows: repeat(6, auto);
+
+    padding-top: 138px;
+    padding-bottom: 120px;
+    &__title {
+        grid-column: 2 / -1;
+        grid-row: 1 / 2;
+        z-index: 10;
+
+        margin-top: 14px;
+    }
+    &__title-back {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    &__info {
+        grid-column: 2 / span 6;
+        grid-row: 2 / 3;
+        
+        margin-top: -7px;
+        margin-bottom: 25px;
+    }
+    &__img {
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+    &__img--large {
+        grid-row: span 2;
+    }
+}

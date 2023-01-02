@@ -1,0 +1,35 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin title {
+	font-family: "Old Standard TT", serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 42px;
+	line-height: 54px;
+	text-transform: uppercase;
+	color: #695A59;
+	&--dark {
+		color: #EEE9E6;
+	}
+}
+
+@mixin title-back {
+	font-family: "Old Standard TT", serif;
+	font-weight: 400;
+	font-size: 140px;
+	line-height: 110px;
+	text-transform: uppercase;
+	color: #EAE1DC;
+	&--dark {
+		color: rgba(154, 133, 132, 0.1);
+	}
+}
+

@@ -1,0 +1,98 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	user-select: none;
+}
+
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	min-width: 1166px;
+	
+	font-family: "Montserrat", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 32px;
+	font-weight: normal;
+	color: #695A59;
+
+	background-color: #F8F6F5;
+	background-color: #ECE6E4;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+fieldset {
+	padding: 0;
+	border: 0;
+}
+
+a, button {
+	cursor: pointer;
+	text-decoration: none;
+	color: #695A59;
+	&:focus {
+		opacity: 1;
+	}
+	&:hover {
+		opacity: 0.6;
+		transition: 0.7s;
+	}
+	&:active {
+		opacity: 0.2;
+	}
+}
+
+ul,
+ol,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  	position: absolute;
+  	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+  	border: 0;
+  	padding: 0;
+  	white-space: nowrap;
+  	clip-path: inset(100%);
+  	clip: rect(0 0 0 0);
+  	overflow: hidden;
+}
+
+.container {
+	width: 1166px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.title {
+	@include title;
+}
+
+.title-back {
+	@include title-back;
+}
+
+
